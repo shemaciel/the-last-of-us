@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 
 body {
      font-family: 'Poppins', sans-serif ;
@@ -7,7 +7,7 @@ body {
 }
 
 /*criando um pseudo elemento, fica por cima de todo conteudo*/
-main:after{
+main:after {
     content: '';
     min-height: 100vh;
     width: 100vw;
@@ -24,7 +24,7 @@ main:after{
     display: flex; /*alinhar conteudo verticalmente*/
     flex-direction: column; /*o padão do flex é row 'linha' que fica um ao lado do outro, mais se quiser um de baixo do outro coloca colum 'coluna'*/
     min-height: 100vh;/*altura 100% do seu dispositivo 'celular, tablet ou pc'*/
-    justify-content:space-evenly ; /*espaçando uniformemente os filhos*/
+    justify-content: space-evenly ; /*espaçando uniformemente os filhos*/
 }
 
  /* para estilizr somente o logo 'estiliza nossa teg logo que esta dentro da teg informacoes' */
@@ -37,8 +37,8 @@ main:after{
 
  .informacoes .descricao {
     width: 49%; /* a % é feita de acordo com a propriedade pai */
-    font-size: 24px; 
-    font-size: #ffffff ; /* cor da fonte em ex-decimal  */
+    font-size: 20px; 
+    color: #ffffff ; /* cor da fonte em ex-decimal  */
     line-height: 30px; /*altura da linha, espaçamentos das linha */
    
  }
