@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+/*  O * de primeira é pra resetar tudo que não queremos usar em nosso site*/ 
+
+* {
+    margin: 0; /* margin é o espaçamento externo de nosso site*/ 
+    padding: 0; /*padding é o espaamento interno de nosso site*/
+    box-sizing: border-box;/* pra conseguir trabalhar melhor essas caixas com as div*/
+}
+
+ul {
+    list-style:none; /* o estilo da lista vai ser nenhum*/ 
+
+}
+a {
+    text-decoration: none;/* para que a ação de todas as ânoras e links não aconteça, para que a decoração do texto seja sempre nenhuma, pra que possamos estilizar como quiser*/ 
+}
+
+
+

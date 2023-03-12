@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+body {
+     font-family: 'Poppins', sans-serif ;
+     max-width:1280px ; /* largura maxima de seu body*/
+     margin: 0 auto; /* vamos dar um espaçamento 0 em cima e em baixo e auto na direita e esquerda no body, assim pode estilizar*/
+}
+
+/*criando um pseudo elemento, fica por cima de todo conteudo*/
+main:after{
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+
+}
+
+/*estilizando as div class*/
+.conteudo {
+    display: flex; /*alinhar conteudo verticalmente*/
+    flex-direction: column; /*o padão do flex é row 'linha' que fica um ao lado do outro, mais se quiser um de baixo do outro coloca colum 'coluna'*/
+    min-height: 100vh;/*altura 100% do seu dispositivo 'celular, tablet ou pc'*/
+    justify-content:space-evenly ; /*espaçando uniformemente os filhos*/
+}
+
+ /* para estilizr somente o logo 'estiliza nossa teg logo que esta dentro da teg informacoes' */
+
+ .informacoes .logo {
+    max-width: 350px; /* qnd define a largura de uma propriedade a largura tbm é estilizada de acordo */
+    filter:invert(1) ; /* para inverter a cor */
+    margin-bottom: 80px ;/* espaçamento em baixo externo */
+ }
+
+ .informacoes .descricao {
+    width: 49%; /* a % é feita de acordo com a propriedade pai */
+    font-size: 24px; 
+    font-size: #ffffff ; /* cor da fonte em ex-decimal  */
+    line-height: 30px; /*altura da linha, espaçamentos das linha */
+   
+ }
+
+ .botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espaçamento dos botoes */
+ }
+
+ .botoes-carrossel .botao {
+    background-color: #ffffff;
+    width: 15px;  /* largura dos botoes */
+    height: 15px;   /* altura dos botoes */
+    border-radius: 50%; /* raio da borda, pra deixar arredondado */
+    border: 2px solid transparent; 
+    cursor: pointer; /* pra qnd ficar parado o cursor */
+    border-color:#ffffff ;
+
+ }
+
+ /* estiliza o elemento que tem essas duas classes */
+ .botoes-carrossel .botao.selecionado {
+    background-color: #1d8346;
+
+ }
+
+ .menu-lateral {
+    position: fixed; /*posicionamento fixo, tira o elemento  do fluxo da pagina normal, como se fosse caderno, ele muda pra baixo ou pra cima se não especificado */
+    top:0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+ }
+
+ .menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+
+ .menu-lateral .icones {
+    width: 30px;
+    filter: invert(1);
+    transition: 0,3s ease-in-out;
+
+ }
+
+  /* :hover, quando passar o musse em cima */
+ .menu-lateral .icone:hover {
+    transform: scale(1.2); /* scale, 'vai aumentar' */
+   
+
+ }
+ .carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;  /* eixo Z é o eixo da profundidade */
+
+ }
+
+ .carrossel .imagem{
+    width: 100%; 
+    height: 100vh;
+    object-fit: cover;/* centralizar as imagens sem perder suas proporções */
+    display: none;
+    animation: mudarimagem 0.7s;
+
+ }
+ .carrossel .imagem.ativa {
+    display: block;
+
+ }
+ @keyframes mudarImagem {
+    from {
+        opacity: 0.85s;
+    }
+    to{
+        opacity: 1;
+    }
+ }
+
+
+
+
+
+
+
