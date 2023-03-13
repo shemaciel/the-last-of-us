@@ -28,20 +28,35 @@ Quando clicarmos no botão temos que mostrar a imagem de fundo correspondente;
         botao.addEventListener('click', ()  => {
 
         //- passo 3: desmarcar o botão selecionado anterior;
-        const botaoSelecionado = document.querySelector('.selecionado');
-        botaoSelecionado.classList.remove('selecionado');
+        desativarBotaoSelecionado();
 
         //- passo 4: marcar o botão clicado como e estivesse selecionado;
-        botao.classList.add('selecionado');
+        selecionarBotaoCarrosel(botao);
 
         //- passo 5: esconder a imagem anterios;
-        const imagemAtiva = document.querySelector('.ativa');
-        imagemAtiva.classList.remove('ativa');
+        esconderImagemAtiva();
 
         // - passo 6: fazer aparecer a imagem correspondente ao btão clicado.
-        imagens[indice].classList. add('ativa');
+        mostrarImagemDeFundo(indice);
 
 
         })
     })
+    function mostrarImagemDeFundo(indice) {
+        imagens[indice].classList.add('ativa');
+    }
+    
+    function selecionarBotaoCarrosel(botao) {
+        botao.classList.add('selecionado');
+    }
+    
+    function esconderImagemAtiva() {
+        const imagemAtiva = document.querySelector('.ativa');
+        imagemAtiva.classList.remove('ativa');
+    }
+    
+    function desativarBotaoSelecionado() {
+        const botaoSelecionado = document.querySelector('.selecionado');
+        botaoSelecionado.classList.remove('selecionado');
+    }
    

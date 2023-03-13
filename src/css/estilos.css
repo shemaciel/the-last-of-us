@@ -31,13 +31,13 @@ main:after {
 
  .informacoes .logo {
     max-width: 350px; /* qnd define a largura de uma propriedade a largura tbm é estilizada de acordo */
-    filter:invert(1) ; /* para inverter a cor */
+    filter: invert(1) ; /* para inverter a cor */
     margin-bottom: 80px ;/* espaçamento em baixo externo */
  }
 
  .informacoes .descricao {
     width: 49%; /* a % é feita de acordo com a propriedade pai */
-    font-size: 20px; 
+    font-size: 24px; 
     color: #ffffff ; /* cor da fonte em ex-decimal  */
     line-height: 30px; /*altura da linha, espaçamentos das linha */
    
@@ -67,34 +67,35 @@ main:after {
  }
 
  .menu-lateral {
-    position: fixed; /*posicionamento fixo, tira o elemento  do fluxo da pagina normal, como se fosse caderno, ele muda pra baixo ou pra cima se não especificado */
-    top:0;
-    right: 0;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+     /*posicionamento fixo, tira o elemento  do fluxo da pagina normal, como se fosse caderno, ele muda pra baixo ou pra cima se não especificado */
+     position: fixed;
+     top: 0;
+     right: 0;
+     width: 80px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
 
  }
 
  .menu-lateral ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 
- }
-
- .menu-lateral .icones {
-    width: 30px;
-    filter: invert(1);
-    transition: 0,3s ease-in-out;
-
- }
+ .menu-lateral .icone {
+	width: 30px;
+	filter: invert(1);
+	transition: 0.3s ease-in-out;
+}
 
   /* :hover, quando passar o musse em cima */
- .menu-lateral .icone:hover {
-    transform: scale(1.2); /* scale, 'vai aumentar' */
+  .menu-lateral .icone:hover {
+	transform: scale(1.2);
+    
+    /* scale, 'vai aumentar' */
    
 
  }
